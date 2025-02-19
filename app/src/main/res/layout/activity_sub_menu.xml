@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/gradient_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.subMenu.SubMenuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_toolbar"
+                android:id="@+id/toolbar"/>
+
+            <ScrollView
+                android:padding="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lin_kanji"
+                            android:padding="@dimen/_15sdp"
+                            android:background="@drawable/background_shape_primary_light_50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                style="@style/headline3"
+                                android:text="Kanji (漢字)"/>
+                            <TextView
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:layout_gravity="center"
+                                style="@style/medium10"
+                                android:text="Pelajari karakter Jepang dari dasar"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_bunpo"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:background="@drawable/background_shape_primary_light_50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                style="@style/headline3"
+                                android:text="Bunpō (文法)"/>
+                            <TextView
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:layout_gravity="center"
+                                style="@style/medium10"
+                                android:text="Pahami aturan tata bahasa penting"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_kosa"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:background="@drawable/background_shape_primary_light_50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                style="@style/headline3"
+                                android:text="Kosa (語彙)"/>
+                            <TextView
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:layout_gravity="center"
+                                style="@style/medium10"
+                                android:text="Perluas kosakata untuk percakapan"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_penjelasan"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:padding="@dimen/_15sdp"
+                            android:background="@drawable/background_shape_primary_light_50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                style="@style/headline3"
+                                android:text="Penjelasan (説明)"/>
+                            <TextView
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:layout_gravity="center"
+                                style="@style/medium10"
+                                android:text="Rangkuman mudah untuk tiap materi"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

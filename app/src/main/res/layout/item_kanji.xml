@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/background_shape_primary8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_kanji"
+                style="@style/headline1"
+                android:text="三"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/title12"
+            android:text="tiga"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/body12"
+                android:text="Kun : "/>
+
+            <TextView
+                android:id="@+id/tv_kunyomi"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                style="@style/medium12"
+                android:text="mitsu, mittsu"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/body12"
+                android:text="On : "/>
+
+            <TextView
+                android:id="@+id/tv_onyomi"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                style="@style/medium12"
+                android:text="mitsu, mittsu"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</layout>

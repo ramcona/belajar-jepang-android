@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/gradient_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_15sdp">
+
+
+       <ScrollView
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scrollbars="none">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_20sdp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <ImageView
+                       android:padding="@dimen/_2sdp"
+                       android:layout_width="@dimen/_20sdp"
+                       android:layout_height="@dimen/_20sdp"
+                       android:src="@drawable/circle_white"/>
+
+                   <TextView
+                       android:layout_marginStart="@dimen/_5sdp"
+                       android:layout_gravity="center"
+                       style="@style/medium12"
+                       android:text="Belajar Bahasa Jepang"/>
+               </LinearLayout>
+               <TextView
+                   android:id="@+id/tv_title_1"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   style="@style/headline2"
+                   android:text="Siap meningkatkan kemampuan bahasa Jepangmu?"/>
+               <TextView
+                   android:id="@+id/tv_title_2"
+                   android:textColor="@color/colorDivider"
+                   style="@style/headline3"
+                   android:text="Pilih level yang sesuai dan mulai belajar!"/>
+
+               <LinearLayout
+                   android:paddingBottom="@dimen/_100sdp"
+                   android:layout_marginTop="@dimen/_20sdp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <LinearLayout
+                       android:id="@+id/lin_n5"
+                       android:padding="@dimen/_15sdp"
+                       android:background="@drawable/background_shape_primary_light_50"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_gravity="center"
+                           style="@style/headline1"
+                           android:text="N5"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           style="@style/medium12"
+                           android:text="Pemula (初心者 / Shoshinsha)"/>
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_marginBottom="@dimen/_10sdp"
+                       android:id="@+id/lin_n4"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:padding="@dimen/_15sdp"
+                       android:background="@drawable/background_shape_primary_light_50"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_gravity="center"
+                           style="@style/headline1"
+                           android:text="N4"/>
+                       <TextView
+                           android:layout_gravity="center"
+                           style="@style/medium12"
+                           android:text="Menengah Dasar (初級 / Shokyuu)"/>
+                   </LinearLayout>
+               </LinearLayout>
+           </LinearLayout>
+       </ScrollView>
+
+        <TextView
+            android:layout_gravity="center"
+            style="@style/body10"
+            android:text="Synertia.id"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

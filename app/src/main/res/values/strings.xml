@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Belajar Bahasa Jepang</string>
+
+    <string name="teks_loading">Loading ...</string>
+    <string name="title">Title</string>
+    <string name="teks_title">Title</string>
+    <string name="teks_no">Tidak</string>
+    <string name="teks_tes">Ya</string>
+    <string name="pesan_yang_di_sampaikan">Pesan yang di sampaikan</string>
+    <string name="teks_oke">Oke</string>
+    <string name="simpan">Simpan</string>
+    <string name="teks_cari_data">Cari Data ...</string>
+    <string name="teks_tidak_ada_data_tersedia">Tidak ada data tersedia</string>
+    <string name="teks_tidak_ada_data_tersedia_untuk_anda_saat_ini">Mohon maaf saat ini kami tidak dapat menyajikan data</string>
+
+</resources>

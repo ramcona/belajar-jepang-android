@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.penjelasan.PenjelasanActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_toolbar"
+                android:id="@+id/toolbar"/>
+
+
+            <LinearLayout
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:background="@drawable/shape_rounded_white_30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <!--search-->
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_shape_editext"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_7sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/baseline_search_24" />
+
+                        <EditText
+                            android:id="@+id/edtSearch"
+                            style="@style/editText"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/teks_cari_data"
+                            android:imeOptions="actionSearch"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/baseline_filter_alt_24"/>
+                </LinearLayout>
+
+
+                <!--shimmer-->
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:shimmer_duration="300">
+
+                    <include layout="@layout/placeholder_work_history" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+                <!--data view-->
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/swipe">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/nesterScroll">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <!--no data view-->
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/view_no_data"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_marginTop="@dimen/_20sdp"
+                                        android:layout_gravity="center"
+                                        android:layout_width="@dimen/_100sdp"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:src="@drawable/ic_empty"/>
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_width="match_parent"
+                                        android:textAlignment="center"
+                                        android:layout_gravity="center"
+                                        style="@style/medium10"
+                                        android:text="@string/teks_tidak_ada_data_tersedia"/>
+                                    <TextView
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:layout_width="match_parent"
+                                        android:textAlignment="center"
+                                        android:layout_gravity="center"
+                                        style="@style/body10"
+                                        android:text="@string/teks_tidak_ada_data_tersedia_untuk_anda_saat_ini"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+
+                                android:id="@+id/rv_data"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                tools:itemCount="5"
+                                tools:listitem="@layout/item_penjelasan"/>
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

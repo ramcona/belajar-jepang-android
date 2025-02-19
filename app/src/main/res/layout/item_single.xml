@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/background_border_abu"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_nama"
+                style="@style/title12"
+                android:text="KATA BENDA DI RUMAH"/>
+
+            <ImageView
+                android:src="@drawable/baseline_chevron_right_24_white"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"/>
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_desc"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/medium12"
+            android:text="diatas adalah contoh perkenalan untuk interview dengan user"/>
+
+
+
+    </LinearLayout>
+</layout>
