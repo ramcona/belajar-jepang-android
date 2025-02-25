@@ -20,6 +20,7 @@ import id.synertia.belajarbahasajepang.extention.onTextChanged
 import id.synertia.belajarbahasajepang.helper.viewBinding
 import id.synertia.belajarbahasajepang.networkUtils.Status
 
+
 class BunpoActivity : BaseActivity() {
     private val binding by viewBinding(ActivityBunpoBinding::inflate)
     private val viewModel: BunpoViewModel by viewModels()
@@ -67,6 +68,7 @@ class BunpoActivity : BaseActivity() {
         setupObserver()
         actionView()
         loadData()
+        loadBanner(binding.adView)
     }
 
 

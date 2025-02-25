@@ -36,5 +36,6 @@ class DetailBunpoActivity : BaseActivity() {
 
         binding.webview.setBackgroundColor(Color.WHITE)
 
+        loadBanner(binding.adView)
     }
 }

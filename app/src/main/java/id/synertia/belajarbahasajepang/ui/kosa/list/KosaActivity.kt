@@ -56,6 +56,7 @@ class KosaActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        loadBanner(binding.adView)
 
         bab = intent.getParcelableExtras(BabKosa())
         key = "kosa_${bab.id}"

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.penjelasan.DetailPenjelasanActivity">
 
     <RelativeLayout
@@ -20,6 +21,15 @@
 
             <include layout="@layout/layout_toolbar"
                 android:id="@+id/toolbar"/>
+
+            <com.google.android.gms.ads.AdView
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-6929098745446472/6623462132" />
+
 
 
             <LinearLayout

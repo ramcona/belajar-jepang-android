@@ -32,6 +32,7 @@ class KanjiActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        loadBanner(binding.adView)
 
         level = intent.getParcelableExtras(Level())
 

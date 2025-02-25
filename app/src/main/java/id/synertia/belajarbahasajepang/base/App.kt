@@ -3,11 +3,15 @@ package id.synertia.belajarbahasajepang.base
 import android.app.Application
 import android.os.StrictMode
 import android.view.View
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.HiltAndroidApp
 import id.synertia.belajarbahasajepang.helper.Helper
 import id.synertia.belajarbahasajepang.helper.SharedPref
 import id.synertia.belajarbahasajepang.ui.sharedView.LoadingDialog
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @HiltAndroidApp
 class App:Application() {
@@ -28,7 +32,11 @@ class App:Application() {
     override fun onCreate() {
         super.onCreate()
 
-//        FirebaseMessaging.getInstance().isAutoInitEnabled = true
+        val backgroundScope = CoroutineScope(Dispatchers.IO)
+        backgroundScope.launch {
+            // Initialize the Google Mobile Ads SDK on a background thread.
+            MobileAds.initialize(this@App) {}
+        }
 
 
         val builder = StrictMode.VmPolicy.Builder()

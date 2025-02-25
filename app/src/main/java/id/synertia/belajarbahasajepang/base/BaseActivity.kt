@@ -10,6 +10,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.isVisible
 import com.facebook.shimmer.ShimmerFrameLayout
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import dagger.hilt.android.AndroidEntryPoint
 import id.synertia.belajarbahasajepang.R
 import id.synertia.belajarbahasajepang.databinding.LayoutToolbarBinding
@@ -19,6 +21,10 @@ import id.synertia.belajarbahasajepang.ui.sharedView.LoadingDialog
 
 @AndroidEntryPoint
 open class BaseActivity : AppCompatActivity() {
+
+    private var mAdView: AdView? = null
+
+
     fun removeActionBar() {
         supportActionBar?.hide()
 
@@ -94,6 +100,34 @@ open class BaseActivity : AppCompatActivity() {
             val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://maps.google.com/?q=$latitude,$longitude"))
             startActivity(webIntent)
         }
+    }
+
+    fun loadBanner(adView:AdView) {
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+        mAdView = adView
+
+    }
+
+    override fun onPause() {
+        if (mAdView != null) {
+            mAdView!!.pause()
+        }
+        super.onPause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (mAdView != null) {
+            mAdView!!.resume()
+        }
+    }
+
+    override fun onDestroy() {
+        if (mAdView != null) {
+            mAdView!!.destroy()
+        }
+        super.onDestroy()
     }
 
 }

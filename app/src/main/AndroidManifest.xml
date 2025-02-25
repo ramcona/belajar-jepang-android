@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 
     <application
         android:name=".base.App"
@@ -15,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarBahasaJepang"
+        android:hardwareAccelerated="true"
         tools:targetApi="31">
         <activity
             android:name=".ui.kosa.list.KosaActivity"
@@ -36,7 +38,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.penjelasan.DetailPenjelasanActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:hardwareAccelerated="false"/>
         <activity
             android:name=".ui.penjelasan.PenjelasanActivity"
             android:exported="false" />
@@ -52,6 +55,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6929098745446472~1140057397"/>
+
+
     </application>
 
 </manifest>

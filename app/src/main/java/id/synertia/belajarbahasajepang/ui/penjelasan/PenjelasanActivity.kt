@@ -38,6 +38,7 @@ class PenjelasanActivity : BaseActivity() {
         setContentView(binding.root)
 
         level = intent.getParcelableExtras(Level())
+        loadBanner(binding.adView)
 
         setToolbar("Penjelasan", binding.toolbar, isWhite = true)
         binding.toolbar.toolbarSubtitle.isVisible = true
